@@ -133,14 +133,17 @@ a:hover { border-color: var(--green-link); }
 /* Hero portrait */
 .hero-portrait {
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .hero-portrait img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
-  border: 2px solid var(--border);
-  display: block;
+  max-width: 400px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  display: inline-block;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .quote {
@@ -374,10 +377,24 @@ a:hover { border-color: var(--green-link); }
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .gallery { grid-template-columns: 1fr; }
   h1 { font-size: 1.8rem; }
-  .container { padding: 2rem 1.2rem; }
-  .site-nav { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
-  .nav-links { gap: 1rem; }
+  .container { padding: 1.5rem 1.2rem; }
+  .site-nav {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 1rem 1.2rem 0;
+  }
+  .nav-links { gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+  .hero-portrait img {
+    max-width: 280px;
+  }
+  p { font-size: 1.05rem; }
+  .wallets { padding: 1rem; }
+  .address { font-size: 0.7rem; }
+  .contract-address { font-size: 0.65rem; padding: 0.8rem; }
+  .token-section { padding: 1.5rem; }
+  .links { justify-content: center; }
 }
