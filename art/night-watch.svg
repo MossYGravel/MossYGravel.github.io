@@ -1,0 +1,640 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <style>
+    @keyframes grow_spore0 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.83; }
+      100% { r: 9.1px; opacity: 0.83; }
+    }
+    #spore0 {
+      animation: grow_spore0 2.8s ease-out 4.1s both;
+    }
+    @keyframes grow_spore1 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.68; }
+      100% { r: 8.2px; opacity: 0.68; }
+    }
+    #spore1 {
+      animation: grow_spore1 2.0s ease-out 3.1s both;
+    }
+    @keyframes grow_spore2 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.62; }
+      100% { r: 2.8px; opacity: 0.62; }
+    }
+    #spore2 {
+      animation: grow_spore2 3.3s ease-out 4.0s both;
+    }
+    @keyframes grow_spore3 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.50; }
+      100% { r: 3.5px; opacity: 0.50; }
+    }
+    #spore3 {
+      animation: grow_spore3 2.0s ease-out 3.2s both;
+    }
+    @keyframes grow_spore4 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.77; }
+      100% { r: 9.5px; opacity: 0.77; }
+    }
+    #spore4 {
+      animation: grow_spore4 2.8s ease-out 3.2s both;
+    }
+    @keyframes grow_spore5 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.90; }
+      100% { r: 4.2px; opacity: 0.90; }
+    }
+    #spore5 {
+      animation: grow_spore5 2.5s ease-out 3.0s both;
+    }
+    @keyframes grow_spore6 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.70; }
+      100% { r: 6.9px; opacity: 0.70; }
+    }
+    #spore6 {
+      animation: grow_spore6 2.7s ease-out 4.1s both;
+    }
+    @keyframes grow_spore7 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.66; }
+      100% { r: 3.6px; opacity: 0.66; }
+    }
+    #spore7 {
+      animation: grow_spore7 3.4s ease-out 0.8s both;
+    }
+    @keyframes grow_spore8 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.95; }
+      100% { r: 5.9px; opacity: 0.95; }
+    }
+    #spore8 {
+      animation: grow_spore8 2.7s ease-out 2.6s both;
+    }
+    @keyframes grow_spore9 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.60; }
+      100% { r: 7.0px; opacity: 0.60; }
+    }
+    #spore9 {
+      animation: grow_spore9 2.2s ease-out 3.8s both;
+    }
+    @keyframes grow_spore10 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.75; }
+      100% { r: 5.7px; opacity: 0.75; }
+    }
+    #spore10 {
+      animation: grow_spore10 2.4s ease-out 1.7s both;
+    }
+    @keyframes grow_spore11 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.65; }
+      100% { r: 5.3px; opacity: 0.65; }
+    }
+    #spore11 {
+      animation: grow_spore11 2.1s ease-out 5.1s both;
+    }
+    @keyframes grow_spore12 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.61; }
+      100% { r: 7.8px; opacity: 0.61; }
+    }
+    #spore12 {
+      animation: grow_spore12 3.4s ease-out 4.6s both;
+    }
+    @keyframes grow_spore13 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.90; }
+      100% { r: 7.1px; opacity: 0.90; }
+    }
+    #spore13 {
+      animation: grow_spore13 3.0s ease-out 2.9s both;
+    }
+    @keyframes grow_spore14 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.87; }
+      100% { r: 7.0px; opacity: 0.87; }
+    }
+    #spore14 {
+      animation: grow_spore14 3.5s ease-out 4.1s both;
+    }
+    @keyframes grow_spore15 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.44; }
+      100% { r: 7.8px; opacity: 0.44; }
+    }
+    #spore15 {
+      animation: grow_spore15 1.7s ease-out 2.9s both;
+    }
+    @keyframes grow_spore16 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.74; }
+      100% { r: 7.6px; opacity: 0.74; }
+    }
+    #spore16 {
+      animation: grow_spore16 1.9s ease-out 3.8s both;
+    }
+    @keyframes grow_spore17 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.57; }
+      100% { r: 2.3px; opacity: 0.57; }
+    }
+    #spore17 {
+      animation: grow_spore17 1.6s ease-out 2.8s both;
+    }
+    @keyframes grow_spore18 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.78; }
+      100% { r: 5.5px; opacity: 0.78; }
+    }
+    #spore18 {
+      animation: grow_spore18 3.1s ease-out 2.8s both;
+    }
+    @keyframes grow_spore19 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.75; }
+      100% { r: 3.9px; opacity: 0.75; }
+    }
+    #spore19 {
+      animation: grow_spore19 3.0s ease-out 3.5s both;
+    }
+    @keyframes grow_spore20 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.94; }
+      100% { r: 6.4px; opacity: 0.94; }
+    }
+    #spore20 {
+      animation: grow_spore20 2.4s ease-out 3.7s both;
+    }
+    @keyframes grow_spore21 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.81; }
+      100% { r: 4.9px; opacity: 0.81; }
+    }
+    #spore21 {
+      animation: grow_spore21 1.6s ease-out 4.3s both;
+    }
+    @keyframes grow_spore22 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.62; }
+      100% { r: 4.0px; opacity: 0.62; }
+    }
+    #spore22 {
+      animation: grow_spore22 1.9s ease-out 4.0s both;
+    }
+    @keyframes grow_spore23 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.41; }
+      100% { r: 4.9px; opacity: 0.41; }
+    }
+    #spore23 {
+      animation: grow_spore23 2.5s ease-out 3.9s both;
+    }
+    @keyframes grow_spore24 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.46; }
+      100% { r: 7.7px; opacity: 0.46; }
+    }
+    #spore24 {
+      animation: grow_spore24 1.8s ease-out 3.2s both;
+    }
+    @keyframes grow_spore25 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.52; }
+      100% { r: 9.5px; opacity: 0.52; }
+    }
+    #spore25 {
+      animation: grow_spore25 2.7s ease-out 3.0s both;
+    }
+    @keyframes grow_spore26 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.84; }
+      100% { r: 8.8px; opacity: 0.84; }
+    }
+    #spore26 {
+      animation: grow_spore26 3.3s ease-out 3.6s both;
+    }
+    @keyframes grow_spore27 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.71; }
+      100% { r: 3.9px; opacity: 0.71; }
+    }
+    #spore27 {
+      animation: grow_spore27 2.5s ease-out 3.6s both;
+    }
+    @keyframes grow_spore28 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.88; }
+      100% { r: 2.8px; opacity: 0.88; }
+    }
+    #spore28 {
+      animation: grow_spore28 3.3s ease-out 4.4s both;
+    }
+    @keyframes grow_spore29 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.48; }
+      100% { r: 6.9px; opacity: 0.48; }
+    }
+    #spore29 {
+      animation: grow_spore29 2.1s ease-out 4.2s both;
+    }
+    @keyframes grow_spore30 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.41; }
+      100% { r: 8.7px; opacity: 0.41; }
+    }
+    #spore30 {
+      animation: grow_spore30 2.1s ease-out 5.0s both;
+    }
+    @keyframes grow_spore31 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.81; }
+      100% { r: 2.8px; opacity: 0.81; }
+    }
+    #spore31 {
+      animation: grow_spore31 3.1s ease-out 4.3s both;
+    }
+    @keyframes grow_spore32 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.43; }
+      100% { r: 9.1px; opacity: 0.43; }
+    }
+    #spore32 {
+      animation: grow_spore32 2.8s ease-out 3.9s both;
+    }
+    @keyframes grow_spore33 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.89; }
+      100% { r: 2.2px; opacity: 0.89; }
+    }
+    #spore33 {
+      animation: grow_spore33 1.6s ease-out 2.5s both;
+    }
+    @keyframes grow_spore34 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.43; }
+      100% { r: 6.0px; opacity: 0.43; }
+    }
+    #spore34 {
+      animation: grow_spore34 3.1s ease-out 4.2s both;
+    }
+    @keyframes grow_spore35 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.43; }
+      100% { r: 2.9px; opacity: 0.43; }
+    }
+    #spore35 {
+      animation: grow_spore35 3.4s ease-out 2.6s both;
+    }
+    @keyframes grow_spore36 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.93; }
+      100% { r: 8.4px; opacity: 0.93; }
+    }
+    #spore36 {
+      animation: grow_spore36 2.6s ease-out 2.7s both;
+    }
+    @keyframes grow_spore37 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.40; }
+      100% { r: 3.0px; opacity: 0.40; }
+    }
+    #spore37 {
+      animation: grow_spore37 2.1s ease-out 4.3s both;
+    }
+    @keyframes grow_spore38 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.55; }
+      100% { r: 3.0px; opacity: 0.55; }
+    }
+    #spore38 {
+      animation: grow_spore38 1.7s ease-out 2.0s both;
+    }
+    @keyframes grow_spore39 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.41; }
+      100% { r: 6.6px; opacity: 0.41; }
+    }
+    #spore39 {
+      animation: grow_spore39 3.1s ease-out 4.6s both;
+    }
+    @keyframes grow_spore40 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.96; }
+      100% { r: 5.2px; opacity: 0.96; }
+    }
+    #spore40 {
+      animation: grow_spore40 2.4s ease-out 3.5s both;
+    }
+    @keyframes grow_spore41 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.82; }
+      100% { r: 6.8px; opacity: 0.82; }
+    }
+    #spore41 {
+      animation: grow_spore41 3.2s ease-out 4.7s both;
+    }
+    @keyframes grow_spore42 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.63; }
+      100% { r: 6.9px; opacity: 0.63; }
+    }
+    #spore42 {
+      animation: grow_spore42 2.8s ease-out 3.9s both;
+    }
+    @keyframes grow_spore43 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.92; }
+      100% { r: 8.4px; opacity: 0.92; }
+    }
+    #spore43 {
+      animation: grow_spore43 1.9s ease-out 4.0s both;
+    }
+    @keyframes grow_spore44 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.89; }
+      100% { r: 9.2px; opacity: 0.89; }
+    }
+    #spore44 {
+      animation: grow_spore44 3.2s ease-out 4.0s both;
+    }
+    @keyframes grow_spore45 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.81; }
+      100% { r: 7.3px; opacity: 0.81; }
+    }
+    #spore45 {
+      animation: grow_spore45 1.8s ease-out 4.0s both;
+    }
+    @keyframes grow_spore46 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.94; }
+      100% { r: 2.0px; opacity: 0.94; }
+    }
+    #spore46 {
+      animation: grow_spore46 1.9s ease-out 4.0s both;
+    }
+    @keyframes grow_spore47 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.95; }
+      100% { r: 6.5px; opacity: 0.95; }
+    }
+    #spore47 {
+      animation: grow_spore47 1.8s ease-out 5.5s both;
+    }
+    @keyframes grow_spore48 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.57; }
+      100% { r: 6.1px; opacity: 0.57; }
+    }
+    #spore48 {
+      animation: grow_spore48 3.4s ease-out 2.9s both;
+    }
+    @keyframes grow_spore49 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.69; }
+      100% { r: 3.9px; opacity: 0.69; }
+    }
+    #spore49 {
+      animation: grow_spore49 2.6s ease-out 3.2s both;
+    }
+    @keyframes grow_spore50 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.78; }
+      100% { r: 5.5px; opacity: 0.78; }
+    }
+    #spore50 {
+      animation: grow_spore50 2.0s ease-out 4.3s both;
+    }
+    @keyframes grow_spore51 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.95; }
+      100% { r: 5.5px; opacity: 0.95; }
+    }
+    #spore51 {
+      animation: grow_spore51 2.9s ease-out 4.0s both;
+    }
+    @keyframes grow_spore52 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.57; }
+      100% { r: 2.2px; opacity: 0.57; }
+    }
+    #spore52 {
+      animation: grow_spore52 1.7s ease-out 4.5s both;
+    }
+    @keyframes grow_spore53 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.90; }
+      100% { r: 7.7px; opacity: 0.90; }
+    }
+    #spore53 {
+      animation: grow_spore53 3.0s ease-out 4.5s both;
+    }
+    @keyframes grow_spore54 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.98; }
+      100% { r: 3.8px; opacity: 0.98; }
+    }
+    #spore54 {
+      animation: grow_spore54 2.3s ease-out 4.2s both;
+    }
+    @keyframes grow_spore55 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.97; }
+      100% { r: 8.2px; opacity: 0.97; }
+    }
+    #spore55 {
+      animation: grow_spore55 1.9s ease-out 4.2s both;
+    }
+    @keyframes grow_spore56 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.61; }
+      100% { r: 9.0px; opacity: 0.61; }
+    }
+    #spore56 {
+      animation: grow_spore56 3.2s ease-out 4.6s both;
+    }
+    @keyframes grow_spore57 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.73; }
+      100% { r: 3.5px; opacity: 0.73; }
+    }
+    #spore57 {
+      animation: grow_spore57 2.6s ease-out 3.8s both;
+    }
+    @keyframes grow_spore58 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.95; }
+      100% { r: 6.2px; opacity: 0.95; }
+    }
+    #spore58 {
+      animation: grow_spore58 2.1s ease-out 4.1s both;
+    }
+    @keyframes grow_spore59 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.73; }
+      100% { r: 4.8px; opacity: 0.73; }
+    }
+    #spore59 {
+      animation: grow_spore59 2.7s ease-out 3.9s both;
+    }
+    @keyframes grow_spore60 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.41; }
+      100% { r: 5.6px; opacity: 0.41; }
+    }
+    #spore60 {
+      animation: grow_spore60 3.2s ease-out 3.6s both;
+    }
+    @keyframes grow_spore61 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.75; }
+      100% { r: 4.3px; opacity: 0.75; }
+    }
+    #spore61 {
+      animation: grow_spore61 1.5s ease-out 3.8s both;
+    }
+    @keyframes grow_spore62 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.45; }
+      100% { r: 9.1px; opacity: 0.45; }
+    }
+    #spore62 {
+      animation: grow_spore62 3.5s ease-out 4.7s both;
+    }
+    @keyframes grow_spore63 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.77; }
+      100% { r: 8.0px; opacity: 0.77; }
+    }
+    #spore63 {
+      animation: grow_spore63 2.7s ease-out 3.8s both;
+    }
+    @keyframes grow_spore64 {
+      0% { r: 0; opacity: 0; }
+      60% { opacity: 0.45; }
+      100% { r: 9.9px; opacity: 0.45; }
+    }
+    #spore64 {
+      animation: grow_spore64 2.3s ease-out 5.0s both;
+    }
+    @keyframes draw_branch0 {
+      0% { stroke-dashoffset: 194; opacity: 0; }
+      5% { opacity: 0.6; }
+      100% { stroke-dashoffset: 0; opacity: 0.6; }
+    }
+    #branch0 {
+      stroke-dasharray: 194;
+      animation: draw_branch0 5.3s ease-in-out 3.8s both;
+    }
+    @keyframes draw_branch1 {
+      0% { stroke-dashoffset: 149; opacity: 0; }
+      5% { opacity: 0.6; }
+      100% { stroke-dashoffset: 0; opacity: 0.6; }
+    }
+    #branch1 {
+      stroke-dasharray: 149;
+      animation: draw_branch1 3.2s ease-in-out 4.3s both;
+    }
+    @keyframes draw_branch2 {
+      0% { stroke-dashoffset: 273; opacity: 0; }
+      5% { opacity: 0.6; }
+      100% { stroke-dashoffset: 0; opacity: 0.6; }
+    }
+    #branch2 {
+      stroke-dasharray: 273;
+      animation: draw_branch2 4.6s ease-in-out 4.5s both;
+    }
+    @keyframes fadeTitle {
+      0% { opacity: 0; }
+      100% { opacity: 0.3; }
+    }
+    #title {
+      animation: fadeTitle 2s ease-in 8s both;
+    }
+  </style>
+  <rect width="800" height="800" fill="#2a2a26"/>
+  <polygon points="620.6,724.4 577.2,777.1 515.0,757.1 486.4,670.9 576.3,674.5" fill="#383838" opacity="0.18"/>
+  <polygon points="437.9,693.7 425.2,726.0 391.0,730.9 366.4,709.6 351.3,670.5 387.8,642.8 432.9,651.7" fill="#808080" opacity="0.28"/>
+  <polygon points="167.7,781.0 120.6,834.9 55.1,840.5 15.8,781.0 56.5,723.9 137.8,697.1" fill="#6e6e6e" opacity="0.33"/>
+  <polygon points="794.3,653.2 738.2,733.1 617.8,721.8 631.6,594.5 747.6,544.5" fill="#4a4a4a" opacity="0.25"/>
+  <polygon points="861.1,397.2 808.1,480.3 715.8,474.0 633.8,397.2 713.0,315.6 823.9,286.9" fill="#383838" opacity="0.32"/>
+  <polygon points="499.7,561.4 475.7,655.7 381.5,638.5 302.2,640.7 246.5,561.4 313.9,493.8 381.5,459.4 443.2,499.7" fill="#5c5c5c" opacity="0.23"/>
+  <path d="M305.4,391.8 L299.4,416.4 L304.4,440.8 L285.6,453.1 L266.9,471.2 L290.7,499.5" fill="none" stroke="#1a1a16" stroke-width="1.0" opacity="0.4"/>
+  <path d="M165.8,15.8 L181.7,42.3 L181.0,46.2 L171.7,75.2 L171.8,82.9" fill="none" stroke="#1a1a16" stroke-width="1.3" opacity="0.4"/>
+  <path d="M56.4,383.8 L77.9,402.7 L72.1,430.3 L64.8,450.9 L78.1,453.5" fill="none" stroke="#1a1a16" stroke-width="1.4" opacity="0.4"/>
+  <path d="M697.8,222.0 L691.4,222.2 L668.3,251.1 L692.5,253.3 L686.1,257.3 L673.2,284.7" fill="none" stroke="#1a1a16" stroke-width="0.8" opacity="0.4"/>
+  <path d="M452.4,208.3 L460.8,226.9 L461.6,238.3 L449.6,261.8" fill="none" stroke="#1a1a16" stroke-width="1.1" opacity="0.4"/>
+  <path d="M32.5,597.9 L16.7,616.5 L6.7,618.3 L3.6,643.8 L-0.8,666.4 L20.9,684.2 L33.3,702.2 L10.1,711.3" fill="none" stroke="#1a1a16" stroke-width="1.0" opacity="0.4"/>
+  <circle id="spore0" cx="151.7" cy="114.3" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore1" cx="245.5" cy="144.7" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore2" cx="557.3" cy="154.1" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore3" cx="101.9" cy="509.9" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore4" cx="97.2" cy="510.0" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore5" cx="229.5" cy="121.6" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore6" cx="630.0" cy="364.5" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore7" cx="206.1" cy="617.2" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore8" cx="205.8" cy="645.3" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore9" cx="162.1" cy="545.0" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore10" cx="212.7" cy="602.8" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore11" cx="136.3" cy="520.2" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore12" cx="664.1" cy="413.5" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore13" cx="188.5" cy="124.2" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore14" cx="113.0" cy="532.8" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore15" cx="587.7" cy="398.4" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore16" cx="171.6" cy="460.3" r="0" fill="#a3c278" opacity="0"/>
+  <circle id="spore17" cx="235.2" cy="625.0" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore18" cx="183.6" cy="137.5" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore19" cx="577.1" cy="130.1" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore20" cx="593.0" cy="133.4" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore21" cx="533.4" cy="480.7" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore22" cx="128.8" cy="490.7" r="0" fill="#a3c278" opacity="0"/>
+  <circle id="spore23" cx="640.5" cy="428.1" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore24" cx="600.1" cy="157.3" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore25" cx="591.3" cy="387.5" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore26" cx="626.0" cy="388.7" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore27" cx="577.5" cy="175.6" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore28" cx="182.3" cy="446.3" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore29" cx="517.8" cy="448.1" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore30" cx="198.9" cy="170.6" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore31" cx="278.0" cy="155.3" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore32" cx="173.1" cy="110.0" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore33" cx="190.1" cy="639.9" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore34" cx="140.4" cy="552.0" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore35" cx="211.4" cy="646.1" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore36" cx="211.6" cy="586.3" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore37" cx="620.9" cy="464.9" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore38" cx="216.8" cy="603.5" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore39" cx="161.8" cy="563.6" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore40" cx="171.9" cy="543.6" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore41" cx="624.5" cy="133.2" r="0" fill="#a3c278" opacity="0"/>
+  <circle id="spore42" cx="550.6" cy="457.8" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore43" cx="258.2" cy="176.6" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore44" cx="525.7" cy="353.5" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore45" cx="619.7" cy="146.4" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore46" cx="233.4" cy="77.9" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore47" cx="247.9" cy="118.8" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore48" cx="224.3" cy="154.3" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore49" cx="540.9" cy="386.7" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore50" cx="196.4" cy="71.2" r="0" fill="#2d5016" opacity="0"/>
+  <circle id="spore51" cx="500.6" cy="417.1" r="0" fill="#3a6b1e" opacity="0"/>
+  <circle id="spore52" cx="168.0" cy="99.5" r="0" fill="#5c8a3c" opacity="0"/>
+  <circle id="spore53" cx="149.1" cy="143.5" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore54" cx="119.0" cy="514.7" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore55" cx="224.3" cy="523.5" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore56" cx="222.7" cy="531.2" r="0" fill="#a3c278" opacity="0"/>
+  <circle id="spore57" cx="644.8" cy="401.2" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore58" cx="647.3" cy="385.3" r="0" fill="#4a7c2e" opacity="0"/>
+  <circle id="spore59" cx="199.8" cy="199.0" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore60" cx="91.5" cy="534.6" r="0" fill="#8ab060" opacity="0"/>
+  <circle id="spore61" cx="109.6" cy="504.1" r="0" fill="#6b9e4a" opacity="0"/>
+  <circle id="spore62" cx="628.4" cy="153.1" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore63" cx="572.0" cy="182.6" r="0" fill="#1a3a0a" opacity="0"/>
+  <circle id="spore64" cx="241.5" cy="121.7" r="0" fill="#a3c278" opacity="0"/>
+  <path id="branch0" d="M568.9,395.5 L542.8,424.5 L561.7,453.5 L547.1,439.3 L538.2,471.4 L523.4,432.1 L500.7,441.6" fill="none" stroke="#1a3a0a" stroke-width="1.6" stroke-linecap="round" opacity="0"/>
+  <path id="branch1" d="M165.2,497.5 L153.0,529.2 L180.0,552.9 L180.2,529.3 L143.8,529.8 L156.9,544.5" fill="none" stroke="#4a7c2e" stroke-width="2.0" stroke-linecap="round" opacity="0"/>
+  <path id="branch2" d="M158.4,516.0 L176.0,489.6 L183.0,449.2 L180.2,474.5 L213.3,503.1 L231.3,543.1 L249.7,563.1 L220.1,537.5 L203.0,524.9" fill="none" stroke="#3a6b1e" stroke-width="2.7" stroke-linecap="round" opacity="0"/>
+  <text id="title" x="400" y="775" text-anchor="middle" font-family="serif" font-size="11" fill="#888" opacity="0">East Wall Study #4090 — growth animation</text>
+</svg>
