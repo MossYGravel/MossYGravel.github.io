@@ -130,6 +130,19 @@ a:hover { border-color: var(--green-link); }
 
 .stone { font-size: 2rem; margin-bottom: 1.5rem; }
 
+/* Hero portrait */
+.hero-portrait {
+  margin-bottom: 2rem;
+}
+
+.hero-portrait img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  display: block;
+}
+
 .quote {
   border-left: 2px solid var(--text-dimmest);
   padding-left: 1.2rem;
