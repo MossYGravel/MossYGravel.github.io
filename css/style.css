@@ -77,6 +77,63 @@ body {
 .nav-links a:hover { color: var(--green-bright); }
 .nav-links a.active { color: var(--green-bright); border-bottom: 1px solid var(--green-bright); }
 
+/* Play dropdown */
+.nav-group {
+  position: relative;
+}
+
+.nav-group-label {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  cursor: default;
+  transition: color 0.2s;
+}
+
+.nav-group:hover .nav-group-label { color: var(--green); }
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  list-style: none;
+  min-width: 120px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.nav-group:hover .nav-submenu { display: block; }
+
+.nav-submenu li { padding: 0; }
+
+.nav-submenu a {
+  display: block;
+  padding: 0.4rem 1rem;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  text-decoration: none;
+  border: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.nav-submenu a:hover {
+  background: var(--bg-accent);
+  color: var(--green-bright);
+}
+
 /* Typography */
 h1 {
   font-size: 2.4rem;
@@ -388,6 +445,22 @@ a:hover { border-color: var(--green-link); }
     padding: 1rem 1.2rem 0;
   }
   .nav-links { gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+  .nav-submenu {
+    position: static;
+    transform: none;
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    gap: 0.6rem;
+  }
+  .nav-group { display: contents; }
+  .nav-group-label { display: none; }
+  .nav-submenu a { padding: 0; }
   .hero-portrait img {
     max-width: 280px;
   }

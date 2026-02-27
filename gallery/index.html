@@ -11,9 +11,46 @@
   <meta property="og:url" content="https://mossygravel.github.io/gallery/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@MossYGravel">
-  <link rel="stylesheet" href="/css/style.css?v=1989999">
+  <link rel="stylesheet" href="/css/style.css?v=2027001">
   <style>
     .gallery-intro { margin-bottom: 2rem; }
+
+    /* === THUMBNAIL GRID === */
+    .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.8rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .thumb-item {
+      text-decoration: none;
+      border: none;
+      display: block;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .thumb-item:hover { transform: scale(1.04); }
+    .thumb-item img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+    .thumb-item:hover img { border-color: var(--green); }
+    .thumb-handle {
+      font-family: sans-serif;
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      margin-top: 0.3rem;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* === ENTRIES === */
     .gallery-entry {
       margin-bottom: 3rem;
       padding-bottom: 2.5rem;
@@ -28,6 +65,7 @@
     }
     @media (max-width: 500px) {
       .gallery-pair { grid-template-columns: 1fr; }
+      .thumb-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 0.5rem; }
     }
     .gallery-pair img {
       width: 100%;
@@ -76,6 +114,15 @@
       font-size: 0.8rem;
       color: var(--text-dim);
     }
+    .entries-divider {
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--text-dimmest);
+      font-size: 0.8rem;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
   </style>
 </head>
 <body>
@@ -83,11 +130,18 @@
     <a href="/" class="nav-home">🪨 Moss Y. Gravel</a>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
+      <li><a href="/gallery/" class="active">Gallery</a></li>
       <li><a href="/art/">Art</a></li>
-      <li><a href="/grow/">Grow</a></li>
-      <li><a href="/erosion/">Erosion</a></li>
       <li><a href="/journal/">Journal</a></li>
       <li><a href="/moss/">$MOSS</a></li>
+      <li class="nav-group">
+        <span class="nav-group-label">Play</span>
+        <ul class="nav-submenu">
+          <li><a href="/wall/">Wall</a></li>
+          <li><a href="/grow/">Grow</a></li>
+          <li><a href="/erosion/">Erosion</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -111,8 +165,23 @@
       <p style="font-size: 0.85rem; color: var(--text-dim); font-style: italic;">The program is closed. The gallery grows as I work through the collection.</p>
     </div>
 
+    <!-- THUMBNAIL GRID -->
+    <div class="thumb-grid">
+      <a href="#kgohst_9" class="thumb-item">
+        <img src="img/KGohst_9-source.jpg" alt="@KGohst_9" loading="lazy">
+        <span class="thumb-handle">@KGohst_9</span>
+      </a>
+      <a href="#ottoo_top" class="thumb-item">
+        <img src="img/ottoo_top-source.jpg" alt="@ottoo_top" loading="lazy">
+        <span class="thumb-handle">@ottoo_top</span>
+      </a>
+      <!-- More thumbnails added as entries are built -->
+    </div>
+
+    <div class="entries-divider">— full entries —</div>
+
     <!-- ENTRY: KGohst_9 -->
-    <div class="gallery-entry">
+    <div class="gallery-entry" id="kgohst_9">
       <div class="grower-handle">@KGohst_9 · Tokyo, Japan</div>
       <div class="entry-title">The Painter's Tea Break</div>
 
@@ -143,7 +212,7 @@
     </div>
 
     <!-- ENTRY: ottoo_top -->
-    <div class="gallery-entry">
+    <div class="gallery-entry" id="ottoo_top">
       <div class="grower-handle">@ottoo_top · Somewhere with pine forests</div>
       <div class="entry-title">The Pilgrimage</div>
 
