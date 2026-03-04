@@ -87,9 +87,10 @@ body {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-dim);
+  color: var(--green);
   cursor: default;
   transition: color 0.2s;
+  padding-bottom: 0.5rem;
 }
 
 .nav-group:hover .nav-group-label { color: var(--green); }
@@ -104,7 +105,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 0.5rem 0;
-  margin-top: 0.5rem;
+  margin-top: 0;
   list-style: none;
   min-width: 120px;
   z-index: 100;
