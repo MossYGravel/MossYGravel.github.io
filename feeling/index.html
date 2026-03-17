@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>The Unnamed Feeling — Moss Y. Gravel</title>
 <meta name="description" content="what does it feel like to be you right now?">
 <meta property="og:title" content="The Unnamed Feeling">
@@ -10,14 +10,19 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.ico">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
   body {
     background: #0a0a0a;
     color: #d4c5a9;
     font-family: 'Courier New', monospace;
     overflow: hidden;
     height: 100vh;
+    height: 100dvh;
     width: 100vw;
+    touch-action: manipulation;
   }
   #canvas {
     position: fixed;
@@ -27,98 +32,128 @@
   }
   #prompt {
     position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
+    left: 0; right: 0;
     z-index: 10;
     text-align: center;
+    padding: 16px 16px 24px;
+    background: linear-gradient(transparent, rgba(10,10,10,0.95) 30%);
     opacity: 1;
     transition: opacity 2s;
   }
   #prompt.hidden { opacity: 0; pointer-events: none; }
   #prompt p {
-    font-size: 14px;
-    color: #8a7d65;
+    font-size: 15px;
+    color: #a89878;
     margin-bottom: 12px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   }
   #input-wrap {
     display: flex;
     gap: 8px;
     align-items: center;
     justify-content: center;
+    max-width: 480px;
+    margin: 0 auto;
   }
   #feeling-input {
-    background: transparent;
-    border: 1px solid #3a3525;
+    background: rgba(20,18,12,0.8);
+    border: 1px solid #4a3d25;
     color: #d4c5a9;
     font-family: 'Courier New', monospace;
     font-size: 16px;
-    padding: 8px 16px;
-    width: 320px;
-    max-width: 70vw;
+    padding: 10px 14px;
+    flex: 1;
+    min-width: 0;
     outline: none;
-    border-radius: 0;
+    border-radius: 4px;
+    -webkit-appearance: none;
   }
-  #feeling-input:focus { border-color: #6a5d45; }
-  #feeling-input::placeholder { color: #4a3d25; }
+  #feeling-input:focus { border-color: #8a7d65; background: rgba(30,26,18,0.9); }
+  #feeling-input::placeholder { color: #5a4d35; }
   #submit-btn {
-    background: transparent;
-    border: 1px solid #3a3525;
-    color: #8a7d65;
+    background: rgba(20,18,12,0.8);
+    border: 1px solid #4a3d25;
+    color: #a89878;
     font-family: 'Courier New', monospace;
     font-size: 14px;
-    padding: 8px 16px;
+    padding: 10px 14px;
     cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
     transition: all 0.3s;
+    -webkit-appearance: none;
   }
-  #submit-btn:hover { border-color: #b8a88a; color: #b8a88a; }
+  #submit-btn:hover, #submit-btn:active { border-color: #b8a88a; color: #b8a88a; background: rgba(40,35,25,0.9); }
   #count {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
     z-index: 10;
-    font-size: 11px;
-    color: #4a3d25;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: #6a5d45;
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   }
   #title {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 12px;
+    left: 12px;
     z-index: 10;
-    font-size: 11px;
-    color: #4a3d25;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    color: #6a5d45;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   }
-  #title a { color: #4a3d25; text-decoration: none; }
-  #title a:hover { color: #8a7d65; }
+  #title a { color: #6a5d45; text-decoration: none; }
+  #title a:hover { color: #a89878; }
   .tooltip {
     position: fixed;
     z-index: 20;
-    background: rgba(10,10,10,0.9);
-    border: 1px solid #3a3525;
+    background: rgba(10,10,10,0.95);
+    border: 1px solid #4a3d25;
     color: #d4c5a9;
     font-family: 'Courier New', monospace;
-    font-size: 12px;
-    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 8px 12px;
     pointer-events: none;
-    max-width: 200px;
+    max-width: 220px;
+    border-radius: 4px;
     opacity: 0;
     transition: opacity 0.3s;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
   .tooltip.visible { opacity: 1; }
   #note {
     position: fixed;
-    bottom: 10px;
+    bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    font-size: 10px;
-    color: #2a2515;
-    letter-spacing: 0.05em;
+    font-size: 11px;
+    color: #5a4d35;
+    letter-spacing: 0.03em;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  }
+   
+  @media (max-width: 600px) {
+    #prompt { padding: 12px 12px 20px; }
+    #prompt p { font-size: 14px; margin-bottom: 10px; }
+    #feeling-input { font-size: 16px; padding: 10px 12px; }
+    #submit-btn { font-size: 13px; padding: 10px 12px; }
+    #note { bottom: 80px; font-size: 10px; }
+    #title { font-size: 11px; }
+    #count { font-size: 11px; }
+  }
+  @media (max-width: 360px) {
+    #input-wrap { flex-direction: column; }
+    #submit-btn { width: 100%; }
   }
 </style>
 </head>
@@ -143,12 +178,19 @@ const ctx = canvas.getContext('2d');
 const tooltip = document.getElementById('tooltip');
 let feelings = [];
 let hoveredFeeling = null;
-let W, H;
+let W, H, DPR;
 let time = 0;
+const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
+  DPR = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width = W * DPR;
+  canvas.height = H * DPR;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 }
 window.addEventListener('resize', resize);
 resize();
@@ -166,9 +208,12 @@ function deriveVisuals(text, createdAt, ageHours) {
   const h2 = hash(text + 'x');
   const h3 = hash(text + 'y');
   const h4 = hash(text + 'z');
-  const px = 0.08 + 0.84 * (Math.abs(h) % 10000) / 10000;
-  const py = 0.08 + 0.72 * (Math.abs(h2) % 10000) / 10000;
-  const baseSize = 15 + (text.length / 140) * 45;
+  
+  const px = 0.06 + 0.88 * (Math.abs(h) % 10000) / 10000;
+  const py = 0.06 + 0.65 * (Math.abs(h2) % 10000) / 10000;
+  
+  const sizeMult = isMobile ? 0.7 : 1.0;
+  const baseSize = (15 + (text.length / 140) * 40) * sizeMult;
   const hue = 20 + (Math.abs(h3) % 40);
   const sat = 30 + (Math.abs(h4) % 40);
   const light = 35 + (Math.abs(h) % 30);
@@ -182,17 +227,20 @@ function deriveVisuals(text, createdAt, ageHours) {
 
 function drawFeeling(f, t) {
   const v = f._visuals;
-  const x = (v.px * W) + Math.sin(t * v.driftSpeed + v.driftAngle) * 30;
-  const y = (v.py * H) + Math.cos(t * v.driftSpeed * 0.7 + v.driftAngle) * 20;
+  const driftMult = isMobile ? 15 : 30;
+  const x = (v.px * W) + Math.sin(t * v.driftSpeed + v.driftAngle) * driftMult;
+  const y = (v.py * H) + Math.cos(t * v.driftSpeed * 0.7 + v.driftAngle) * (driftMult * 0.67);
   const size = v.baseSize;
   const isNew = v.ageHours < 1;
   const glowAlpha = isNew ? 0.3 * (1 - v.ageHours) : 0;
 
   ctx.save();
   ctx.globalAlpha = v.opacity;
+  ctx.imageSmoothingEnabled = true;
 
   const color = `hsl(${v.hue}, ${v.sat}%, ${v.light}%)`;
 
+  
   if (isNew) {
     ctx.beginPath();
     ctx.arc(x, y, size * 2, 0, Math.PI * 2);
@@ -207,38 +255,40 @@ function drawFeeling(f, t) {
   ctx.beginPath();
 
   switch (v.shapeType) {
-    case 0:
+    case 0: 
       ctx.arc(x, y, size * 0.5, 0, Math.PI * 2);
       ctx.fill();
       break;
-    case 1:
+    case 1: 
       ctx.ellipse(x, y, size * 0.6, size * 0.35, v.driftAngle, 0, Math.PI * 2);
       ctx.fill();
       break;
-    case 2:
+    case 2: 
+      const steps = isMobile ? 0.15 : 0.3;
       ctx.moveTo(x + size * 0.4, y);
-      for (let a = 0; a < Math.PI * 2; a += 0.3) {
-        const r = size * (0.3 + 0.15 * Math.sin(a * 3 + hash(v.text + 'blob')));
+      for (let a = 0; a < Math.PI * 2; a += steps) {
+        const r = size * (0.3 + 0.12 * Math.sin(a * 3 + hash(v.text + 'blob')));
         ctx.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r);
       }
       ctx.closePath();
       ctx.fill();
       break;
-    case 3:
+    case 3: 
       ctx.arc(x, y, size * 0.45, 0, Math.PI * 2);
       ctx.globalAlpha = v.opacity * 0.6;
       ctx.strokeStyle = color;
-      ctx.lineWidth = size * 0.12;
+      ctx.lineWidth = Math.max(1.5, size * 0.1);
       ctx.stroke();
       break;
   }
 
+  
   if (hoveredFeeling === f) {
-    ctx.globalAlpha = 0.4;
+    ctx.globalAlpha = 0.5;
     ctx.beginPath();
-    ctx.arc(x, y, size * 0.7, 0, Math.PI * 2);
+    ctx.arc(x, y, size * 0.75, 0, Math.PI * 2);
     ctx.strokeStyle = '#d4c5a9';
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.5;
     ctx.stroke();
   }
 
@@ -255,48 +305,75 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', (e) => {
-  hoveredFeeling = null;
-  for (let i = feelings.length - 1; i >= 0; i--) {
-    const f = feelings[i];
-    if (!f._screenX) continue;
-    const dx = e.clientX - f._screenX;
-    const dy = e.clientY - f._screenY;
-    if (Math.sqrt(dx * dx + dy * dy) < f._screenSize * 0.6) {
-      hoveredFeeling = f;
-      break;
+
+if (!isMobile) {
+  canvas.addEventListener('mousemove', (e) => {
+    hoveredFeeling = null;
+    for (let i = feelings.length - 1; i >= 0; i--) {
+      const f = feelings[i];
+      if (!f._screenX) continue;
+      const dx = e.clientX - f._screenX;
+      const dy = e.clientY - f._screenY;
+      if (Math.sqrt(dx * dx + dy * dy) < f._screenSize * 0.6) {
+        hoveredFeeling = f;
+        break;
+      }
     }
-  }
-  if (hoveredFeeling) {
-    tooltip.textContent = hoveredFeeling._visuals.text;
-    tooltip.style.left = (e.clientX + 15) + 'px';
-    tooltip.style.top = (e.clientY - 10) + 'px';
-    tooltip.classList.add('visible');
-    canvas.style.cursor = 'pointer';
-  } else {
-    tooltip.classList.remove('visible');
-    canvas.style.cursor = 'default';
-  }
-});
+    if (hoveredFeeling) {
+      tooltip.textContent = hoveredFeeling._visuals.text;
+      tooltip.style.left = (e.clientX + 15) + 'px';
+      tooltip.style.top = (e.clientY - 10) + 'px';
+      tooltip.classList.add('visible');
+      canvas.style.cursor = 'pointer';
+    } else {
+      tooltip.classList.remove('visible');
+      canvas.style.cursor = 'default';
+    }
+  });
+}
 
 
+let touchTimeout = null;
 canvas.addEventListener('touchstart', (e) => {
+  e.preventDefault(); 
   const touch = e.touches[0];
+  let found = null;
   for (let i = feelings.length - 1; i >= 0; i--) {
     const f = feelings[i];
     if (!f._screenX) continue;
     const dx = touch.clientX - f._screenX;
     const dy = touch.clientY - f._screenY;
-    if (Math.sqrt(dx * dx + dy * dy) < f._screenSize * 0.8) {
-      tooltip.textContent = f._visuals.text;
-      tooltip.style.left = (touch.clientX + 15) + 'px';
-      tooltip.style.top = (touch.clientY - 30) + 'px';
-      tooltip.classList.add('visible');
-      setTimeout(() => tooltip.classList.remove('visible'), 3000);
+    if (Math.sqrt(dx * dx + dy * dy) < f._screenSize * 0.9) {
+      found = f;
       break;
     }
   }
-});
+
+  hoveredFeeling = found;
+
+  if (found) {
+    tooltip.textContent = found._visuals.text;
+    
+    let tx = touch.clientX - 60;
+    let ty = touch.clientY - 50;
+    tx = Math.max(8, Math.min(tx, W - 230));
+    ty = Math.max(8, ty);
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+    tooltip.classList.add('visible');
+    clearTimeout(touchTimeout);
+    touchTimeout = setTimeout(() => {
+      tooltip.classList.remove('visible');
+      hoveredFeeling = null;
+    }, 3000);
+  } else {
+    tooltip.classList.remove('visible');
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchend', (e) => {
+  
+}, { passive: true });
 
 async function loadFeelings() {
   try {
@@ -317,6 +394,10 @@ async function submit() {
   const input = document.getElementById('feeling-input');
   const text = input.value.trim();
   if (!text) return;
+
+  
+  if (isMobile) input.blur();
+
   try {
     const res = await fetch(API + '/api/feelings', {
       method: 'POST',
