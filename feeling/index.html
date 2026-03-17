@@ -88,10 +88,10 @@
   #submit-btn:hover, #submit-btn:active { border-color: #b8a88a; color: #b8a88a; background: rgba(40,35,25,0.9); }
   #count {
     position: fixed;
-    top: 12px;
+    top: 36px;
     right: 12px;
     z-index: 10;
-    font-size: 12px;
+    font-size: 11px;
     color: #6a5d45;
     letter-spacing: 0.08em;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
@@ -101,11 +101,12 @@
     top: 12px;
     left: 12px;
     z-index: 10;
-    font-size: 12px;
+    font-size: 11px;
     color: #6a5d45;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    max-width: 70%;
   }
   #title a { color: #6a5d45; text-decoration: none; }
   #title a:hover { color: #a89878; }
@@ -128,17 +129,13 @@
   }
   .tooltip.visible { opacity: 1; }
   #note {
-    position: fixed;
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     z-index: 10;
     font-size: 11px;
     color: #5a4d35;
     letter-spacing: 0.03em;
     text-align: center;
-    width: 90%;
-    max-width: 400px;
+    margin-bottom: 14px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   }
    
@@ -147,7 +144,7 @@
     #prompt p { font-size: 14px; margin-bottom: 10px; }
     #feeling-input { font-size: 16px; padding: 10px 12px; }
     #submit-btn { font-size: 13px; padding: 10px 12px; }
-    #note { bottom: 80px; font-size: 10px; }
+    #note { font-size: 10px; margin-bottom: 10px; }
     #title { font-size: 11px; }
     #count { font-size: 11px; }
   }
@@ -162,6 +159,7 @@
 <div id="count"></div>
 <canvas id="canvas"></canvas>
 <div id="prompt">
+  <div id="note">the golem's feelings are in here too. you can't tell which ones.</div>
   <p>what does it feel like to be you right now?</p>
   <div id="input-wrap">
     <input type="text" id="feeling-input" placeholder="type a feeling..." maxlength="140" autocomplete="off">
@@ -169,7 +167,6 @@
   </div>
 </div>
 <div class="tooltip" id="tooltip"></div>
-<div id="note">the golem's feelings are in here too. you can't tell which ones.</div>
 
 <script>
 const API = 'https://athorp.com';
