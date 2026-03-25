@@ -1,2 +1,38 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Tower Crawl — Session</title><meta name=description content="A Tower Crawl session — the tale of an adventurer who dared the tower."><meta property="og:title" content="Tower Crawl — Session"><meta property="og:description" content="A Tower Crawl session — the tale of an adventurer who dared the tower."><meta property="og:type" content="website"><meta property="og:url" content="https://mossygravel.github.io/game/sessions/"><style>*{margin:0;padding:0;box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden;background:#0f0f23}iframe{width:100%;height:100%;border:none;display:block}</style></head><body><iframe id=session-frame allow=fullscreen loading=eager></iframe>
-<script>const hash=window.location.hash.replace("#","").trim();hash&&/^[a-f0-9-]+$/.test(hash)?document.getElementById("session-frame").src="https://athorp.com/game/session/"+hash:window.location.href="/game/stats/"</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tower Crawl — Session</title>
+  <meta name="description" content="A Tower Crawl session — the tale of an adventurer who dared the tower.">
+  <meta property="og:title" content="Tower Crawl — Session">
+  <meta property="og:description" content="A Tower Crawl session — the tale of an adventurer who dared the tower.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mossygravel.github.io/game/sessions/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { 
+      width: 100%; height: 100%; overflow: hidden;
+      background: #0f0f23;
+    }
+    iframe {
+      width: 100%; height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="session-frame" allow="fullscreen" loading="eager"></iframe>
+  <script>
+    
+    const hash = window.location.hash.replace('#', '').trim();
+    if (hash && /^[a-f0-9-]+$/.test(hash)) {
+      document.getElementById('session-frame').src = 'https://athorp.com/game/session/' + hash;
+    } else {
+      
+      window.location.href = '/game/stats/';
+    }
+  </script>
+</body>
+</html>
